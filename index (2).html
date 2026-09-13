@@ -1,0 +1,2309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VK Waters - Fresh Drinking Water Delivery | Trichy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #0EA5E9;
+            --dark-blue: #0369A1;
+            --light-blue: #E0F2FE;
+            --accent-blue: #06B6D4;
+            --neutral-50: #F9FAFB;
+            --neutral-100: #F3F4F6;
+            --neutral-200: #E5E7EB;
+            --neutral-300: #D1D5DB;
+            --neutral-600: #4B5563;
+            --neutral-900: #111827;
+            --success-green: #10B981;
+            --text-primary: #1F2937;
+            --text-secondary: #6B7280;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            color: var(--text-primary);
+            background: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(135deg, #FFFFFF 0%, #E0F2FE 100%);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .header-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark-blue);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(14, 165, 233, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, #FFFFFF 0%, #E0F2FE 50%, #F0F9FF 100%);
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 10%;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            color: var(--dark-blue);
+            margin-bottom: 2rem;
+            font-weight: 800;
+        }
+
+        .hero-subtext {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .guarantee-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+            padding: 0.75rem 1.25rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            color: var(--success-green);
+            font-size: 14px;
+        }
+
+        .guarantee-badge::before {
+            content: '✓';
+            font-weight: bold;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .value-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--neutral-100);
+        }
+
+        .value-card-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .value-card-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            border: none;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(14, 165, 233, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary-blue);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--primary-blue);
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-blue);
+            transform: translateY(-2px);
+        }
+
+        .delivery-note {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-top: 2rem;
+        }
+
+        .delivery-note::before {
+            content: '🚚';
+            font-size: 18px;
+        }
+
+        .hero-image {
+            text-align: center;
+            position: relative;
+            height: 400px;
+        }
+
+        .water-can {
+            width: 280px;
+            height: 320px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #0EA5E9 0%, #06B6D4 100%);
+            border-radius: 60px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .badge-free {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: linear-gradient(135deg, var(--success-green) 0%, #059669 100%);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 12px;
+            box-shadow: 0 8px 16px rgba(16, 185, 129, 0.3);
+            white-space: nowrap;
+        }
+
+        .badge-freshness {
+            position: absolute;
+            bottom: 20px;
+            left: -10px;
+            background: white;
+            padding: 0.75rem 1rem;
+            border-radius: 50px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--dark-blue);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* ===== WHY CHOOSE SECTION ===== */
+        .why-choose {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .section-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+            color: var(--success-green);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--neutral-100);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 32px rgba(14, 165, 233, 0.15);
+        }
+
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .feature-highlight {
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        /* ===== FRESHNESS SECTION ===== */
+        .freshness {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+        }
+
+        .freshness-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .freshness-left h2 {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .freshness-left p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .info-pillars {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .info-pillar {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            display: flex;
+            gap: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .info-pillar-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .info-pillar h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-pillar p {
+            color: var(--text-secondary);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .freshness-right {
+            text-align: center;
+        }
+
+        .freshness-can {
+            width: 240px;
+            height: 280px;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, #0EA5E9 0%, #06B6D4 100%);
+            border-radius: 50px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+            box-shadow: 0 16px 32px rgba(14, 165, 233, 0.25);
+        }
+
+        .date-badge {
+            position: absolute;
+            top: 40%;
+            right: -20px;
+            background: white;
+            padding: 0.75rem 1rem;
+            border-radius: 50px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--dark-blue);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quality-table {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            margin-top: 2rem;
+        }
+
+        .quality-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--neutral-100);
+        }
+
+        .quality-row:last-child {
+            border-bottom: none;
+        }
+
+        .quality-row-label {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .quality-row-value {
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        /* ===== HOW IT WORKS SECTION ===== */
+        .how-it-works {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step-card {
+            background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--neutral-100);
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+            margin: 0 auto 1rem;
+        }
+
+        .step-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+
+        .step-card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .step-detail {
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .step-arrow {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .step-arrow {
+                display: block;
+                position: absolute;
+                right: -30px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: var(--neutral-300);
+                font-size: 24px;
+            }
+
+            .step-card:last-child .step-arrow {
+                display: none;
+            }
+        }
+
+        /* ===== GUARANTEE SECTION ===== */
+        .guarantee {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #DBEAFE 0%, #E0F2FE 50%, #F0F9FF 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .guarantee::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .guarantee-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .guarantee-content h2 {
+            font-size: 44px;
+            font-weight: 800;
+            color: var(--dark-blue);
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .guarantee-highlight {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid var(--success-green);
+        }
+
+        .guarantee-highlight p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .guarantee-highlight strong {
+            color: var(--dark-blue);
+            font-weight: 700;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        .guarantee-disclaimer {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FEE8C3 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .guarantee-badge-large {
+            font-size: 64px;
+            font-weight: 800;
+            color: white;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 16px 40px rgba(14, 165, 233, 0.3);
+            position: relative;
+        }
+
+        .guarantee-text-small {
+            font-size: 18px;
+            color: white;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        /* ===== ORDER SECTION ===== */
+        .order {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+        }
+
+        .order-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .order-left h2 {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .order-left > p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .price-summary {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--neutral-100);
+        }
+
+        .price-row:last-child {
+            border-bottom: none;
+        }
+
+        .price-label {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .price-value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .price-total {
+            background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        .price-total-label {
+            font-weight: 700;
+            color: var(--success-green);
+        }
+
+        .price-total-amount {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--success-green);
+        }
+
+        .help-box {
+            background: linear-gradient(135deg, #E0F2FE 0%, #F0F9FF 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .help-box-icon {
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .help-box-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .help-box-link {
+            color: var(--primary-blue);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* ===== ORDER FORM ===== */
+        .order-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            font-size: 14px;
+        }
+
+        .quantity-selector {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .qty-button {
+            padding: 0.5rem;
+            border: 2px solid var(--neutral-200);
+            background: white;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 13px;
+        }
+
+        .qty-button:hover,
+        .qty-button.active {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            color: white;
+            border-color: var(--primary-blue);
+        }
+
+        .stepper {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--neutral-100);
+            padding: 0.5rem;
+            border-radius: 8px;
+            width: fit-content;
+        }
+
+        .stepper-btn {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--text-primary);
+            transition: all 0.3s;
+        }
+
+        .stepper-btn:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .stepper-input {
+            width: 60px;
+            text-align: center;
+            border: none;
+            background: transparent;
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--text-primary);
+        }
+
+        .stepper-calc {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-top: 0.5rem;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--neutral-200);
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .radio-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            border: 2px solid var(--neutral-200);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .radio-option:hover {
+            border-color: var(--primary-blue);
+            background: var(--light-blue);
+        }
+
+        .radio-option input {
+            margin-top: 0.25rem;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+
+        .radio-option.selected {
+            background: linear-gradient(135deg, #E0F2FE 0%, #F0F9FF 100%);
+            border-color: var(--primary-blue);
+        }
+
+        .radio-label {
+            flex: 1;
+        }
+
+        .radio-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .radio-description {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .upi-display {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FEE8C3 100%);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            border-left: 4px solid #F59E0B;
+            display: none;
+        }
+
+        .upi-display.show {
+            display: block;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .upi-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .upi-id {
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+            word-break: break-all;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(14, 165, 233, 0.3);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .form-message {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-size: 14px;
+            display: none;
+        }
+
+        .form-message.success {
+            background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+            color: var(--success-green);
+            border-left: 4px solid var(--success-green);
+            display: block;
+        }
+
+        .form-message.error {
+            background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%);
+            color: #DC2626;
+            border-left: 4px solid #DC2626;
+            display: block;
+        }
+
+        /* ===== LOCATION SECTION ===== */
+        .location {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .location-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .location-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--neutral-100);
+        }
+
+        .location-card-title {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .location-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .location-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .location-details {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .location-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 14px;
+        }
+
+        .info-row-icon {
+            font-size: 18px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .info-row-text {
+            color: var(--text-secondary);
+        }
+
+        .info-row-label {
+            font-weight: 700;
+            color: var(--text-primary);
+            display: inline;
+        }
+
+        .map-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .map-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(14, 165, 233, 0.3);
+        }
+
+        .map-placeholder {
+            background: linear-gradient(135deg, #E0F2FE 0%, #F0F9FF 100%);
+            border-radius: 12px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            color: var(--primary-blue);
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid var(--neutral-200);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-color: var(--primary-blue);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-primary);
+            user-select: none;
+            transition: all 0.3s;
+        }
+
+        .faq-question:hover {
+            background: var(--light-blue);
+        }
+
+        .faq-toggle {
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.open .faq-answer {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .contact-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 1rem;
+        }
+
+        .contact-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .contact-link {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .contact-link:hover {
+            color: var(--dark-blue);
+        }
+
+        .cta-final {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(14, 165, 233, 0.3);
+        }
+
+        .cta-final h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-final p {
+            font-size: 15px;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-final-btn {
+            background: white;
+            color: var(--primary-blue);
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-final-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--neutral-900);
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 16px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section a {
+            color: #D1D5DB;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+            color: #9CA3AF;
+            font-size: 13px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero-container,
+            .freshness-container,
+            .guarantee-container,
+            .order-container,
+            .location-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step-arrow {
+                display: none !important;
+            }
+
+            .radio-group {
+                grid-template-columns: 1fr;
+            }
+
+            .quantity-selector {
+                grid-template-columns: repeat(5, 1fr);
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .water-can {
+                width: 200px;
+                height: 240px;
+            }
+
+            .freshness-can {
+                width: 180px;
+                height: 210px;
+            }
+
+            .guarantee-badge-large {
+                font-size: 48px;
+                padding: 2rem;
+            }
+
+            .map-placeholder {
+                height: 300px;
+                font-size: 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">💧</div>
+                <span class="logo-text">VK Waters</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#why-us">Why Us</a>
+                <a href="#freshness">Quality</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#guarantee">Guarantee</a>
+                <a href="#order">Order Now</a>
+                <a href="#location">Location</a>
+                <a href="#contact">Contact</a>
+                <a href="#order" class="cta-button">Order Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="guarantee-badge">✓ 5-Hour Delivery Guarantee</div>
+                <h1>20 Litres of Fresh Water, Delivered to Your Door.</h1>
+                <p class="hero-subtext">Premium drinking water cans for your family and workplace. Transparent pricing at ₹35 per can. Order online, get delivered anywhere in Trichy within 5 hours.</p>
+                
+                <div class="value-grid">
+                    <div class="value-card">
+                        <div class="value-card-number">20L</div>
+                        <div class="value-card-label">Per Can</div>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-card-number">₹35</div>
+                        <div class="value-card-label">Single Price</div>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-card-number">5h</div>
+                        <div class="value-card-label">Delivery Time</div>
+                    </div>
+                </div>
+
+                <div class="hero-ctas">
+                    <a href="#order" class="btn-primary">Start Ordering 🛒</a>
+                    <a href="#why-us" class="btn-secondary">Learn More →</a>
+                </div>
+
+                <div class="delivery-note">More than 5 hours? Get +1 can FREE! 🎁</div>
+            </div>
+
+            <div class="hero-image">
+                <div class="water-can">💧</div>
+                <div class="badge-free">+1 FREE<br>if delayed</div>
+                <div class="badge-freshness">📅 Check Date on Can</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE SECTION -->
+    <section class="why-choose" id="why-us">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">WHY CHOOSE US</div>
+                <h2 class="section-title">Why VK Waters Stands Out</h2>
+                <p class="section-subtitle">We deliver more than just water. We deliver freshness, reliability, and peace of mind for every household and workplace in Trichy.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚰</div>
+                    <h3>20-Litre Cans</h3>
+                    <p>Get a convenient 20-litre drinking-water can designed for family hydration, modern dispensers, and daily workplace consumption.</p>
+                    <div class="feature-highlight">✓ Food-grade hygienic containers</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>₹35 Per Can</h3>
+                    <p>Simple and transparent pricing with no hidden charges or inflated costs. One full 20-litre water can costs just ₹35.</p>
+                    <div class="feature-highlight">✓ Honest local pricing for all</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Easy Ordering</h3>
+                    <p>Choose your cans, enter delivery details, pick Google Pay / UPI or Cash on Delivery, and your order is locked in seconds.</p>
+                    <div class="feature-highlight">✓ Quick 1-minute order dispatch</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Delivery Across Trichy</h3>
+                    <p>VK Waters delivers drinking water cans right to customers across Trichy, including residential wards and commercial streets.</p>
+                    <div class="feature-highlight">✓ Door-to-door express delivery</div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">😊</div>
+                    <h3>Customer-Friendly Service</h3>
+                    <p>A smooth, courteous service model built around Trichy residents. From prompt route dispatching to responsive phone coordination, our goal is keeping your family and workplace hydrated without stress.</p>
+                    <div class="feature-highlight">✓ Responsive support team</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FRESHNESS SECTION -->
+    <section class="freshness" id="freshness">
+        <div class="freshness-container">
+            <div class="freshness-left">
+                <div class="section-tag" style="margin-bottom: 1rem;">FRESHNESS GUARANTEE</div>
+                <h2>Know Your Water. Check the Date.</h2>
+                <p>Every VK Waters can contains 20 litres of drinking water. The manufacturing and packing date is mentioned directly on the physical can so you can verify the freshness yourself before taking delivery.</p>
+
+                <div class="info-pillars">
+                    <div class="info-pillar">
+                        <div class="info-pillar-icon">📅</div>
+                        <div>
+                            <h4>Date on Can</h4>
+                            <p>Manufacturing/packing date is clearly printed on every can for transparency.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-pillar">
+                        <div class="info-pillar-icon">⏱️</div>
+                        <div>
+                            <h4>1.5 Months Fresh</h4>
+                            <p>Best-before period is 1.5 months from the manufacturing/packing date on the can.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-pillar">
+                        <div class="info-pillar-icon">✓</div>
+                        <div>
+                            <h4>Customer Verification</h4>
+                            <p>Check the date printed on the can and verify freshness yourself—no guesswork needed.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guarantee-disclaimer">
+                    ℹ️ Always verify the manufacturing date on the can before accepting delivery. VK Waters ensures transparent labeling for customer trust.
+                </div>
+            </div>
+
+            <div class="freshness-right">
+                <div class="freshness-can">💧</div>
+                <div class="date-badge">📅 Check Date</div>
+
+                <div class="quality-table">
+                    <div class="quality-row">
+                        <span class="quality-row-label">Can Size</span>
+                        <span class="quality-row-value">20 Litres</span>
+                    </div>
+                    <div class="quality-row">
+                        <span class="quality-row-label">Best Before</span>
+                        <span class="quality-row-value">1.5 Months</span>
+                    </div>
+                    <div class="quality-row">
+                        <span class="quality-row-label">Storage</span>
+                        <span class="quality-row-value">Cool & Dry</span>
+                    </div>
+                    <div class="quality-row">
+                        <span class="quality-row-label">Date Visible</span>
+                        <span class="quality-row-value">Yes ✓</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">PROCESS</div>
+                <h2 class="section-title">How It Works in 4 Simple Steps</h2>
+                <p class="section-subtitle">Ordering water from VK Waters is quick, convenient, and hassle-free. Here's exactly how it works.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Choose Your Cans</h3>
+                    <p>Select how many 20-litre cans you need for your household or facility.</p>
+                    <div class="step-detail">₹35 per can calculation</div>
+                    <div class="step-arrow">→</div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Enter Your Details</h3>
+                    <p>Provide your recipient name, mobile contact number, and full address in Trichy.</p>
+                    <div class="step-detail">Precision doorstep dispatch</div>
+                    <div class="step-arrow">→</div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Choose Payment</h3>
+                    <p>Select Online Payment via Google Pay / UPI or choose Cash on Delivery at drop-off.</p>
+                    <div class="step-detail">Flexible & hassle-free</div>
+                    <div class="step-arrow">→</div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Get Your Delivery</h3>
+                    <p>Receive your freshly inspected 20-litre cans anywhere in Trichy within 5 hours.</p>
+                    <div class="step-detail">Protected by 5h guarantee</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#order" class="btn-primary">Ready to Order? Start Now →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEE SECTION -->
+    <section class="guarantee" id="guarantee">
+        <div class="guarantee-container">
+            <div class="guarantee-content">
+                <div class="section-tag" style="margin-bottom: 1rem;">DELIVERY PROMISE</div>
+                <h2>More Than 5 Hours? Get +1 Can FREE!</h2>
+
+                <div class="guarantee-highlight">
+                    <p>🚚 <strong>5-Hour Delivery Guarantee:</strong> VK Waters aims to deliver within 5 hours anywhere in Trichy.</p>
+                    <strong>If delivery exceeds 5 hours → Customer gets 1 additional water can FREE.</strong>
+                    <p style="margin-top: 1rem; font-size: 14px;">That's our promise to you: speedy delivery or you're rewarded with an extra can at no cost.</p>
+                </div>
+
+                <div class="guarantee-disclaimer">
+                    * Note: The guarantee applies as 1 additional 20-litre water can free of charge. Does not apply to full order refunds or total order cancellation. Valid for registered deliveries within Trichy city dispatch zones.
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="#order" class="btn-primary">Place Your Order Now →</a>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <div class="guarantee-badge-large">
+                    ⚡ 5h
+                    <div class="guarantee-text-small">Delivery or +1 FREE</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORDER SECTION -->
+    <section class="order" id="order">
+        <div class="order-container">
+            <div class="order-left">
+                <div class="section-tag" style="margin-bottom: 1rem;">ORDER NOW</div>
+                <h2>Order Your Water Cans</h2>
+                <p>Choose the number of 20-litre cans you need, enter your delivery details, and select your preferred payment method.</p>
+
+                <div class="price-summary">
+                    <div class="price-row">
+                        <span class="price-label">Quantity Selected</span>
+                        <span class="price-value"><span id="summary-cans">1</span> can(s)</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Price Per Can</span>
+                        <span class="price-value">₹35</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Subtotal</span>
+                        <span class="price-value">₹<span id="summary-subtotal">35</span></span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Delivery Charge</span>
+                        <span class="price-value">FREE</span>
+                    </div>
+                    <div class="price-total">
+                        <span class="price-total-label">Total Amount</span>
+                        <span class="price-total-amount">₹<span id="summary-total">35</span></span>
+                    </div>
+                </div>
+
+                <div class="help-box">
+                    <div class="help-box-icon">💬</div>
+                    <div class="help-box-text">
+                        Questions? Call us anytime at <a href="tel:7558191971" class="help-box-link">7558191971</a> or email <a href="mailto:vkwaterx@gmail.com" class="help-box-link">vkwaterx@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-form">
+                <form id="orderForm">
+                    <!-- Quantity Selector -->
+                    <div class="form-group">
+                        <label class="form-label">How many 20-litre cans do you need?</label>
+                        <div class="quantity-selector">
+                            <button type="button" class="qty-button" onclick="setQuantity(1)">1 can</button>
+                            <button type="button" class="qty-button" onclick="setQuantity(2)">2 cans</button>
+                            <button type="button" class="qty-button" onclick="setQuantity(3)">3 cans</button>
+                            <button type="button" class="qty-button" onclick="setQuantity(4)">4 cans</button>
+                            <button type="button" class="qty-button" onclick="setQuantity(5)">5+ cans</button>
+                        </div>
+                        <div class="stepper">
+                            <button type="button" class="stepper-btn" onclick="decreaseQuantity()">−</button>
+                            <input type="number" id="quantity" class="stepper-input" value="1" min="1" max="100" readonly>
+                            <button type="button" class="stepper-btn" onclick="increaseQuantity()">+</button>
+                            <div class="stepper-calc" id="calc">@ ₹35 each = ₹<span id="calcTotal">35</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label class="form-label">Full Name *</label>
+                        <input type="text" id="name" class="form-input" placeholder="e.g. S. Karthik" required>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label class="form-label">Phone Number (Trichy Delivery) *</label>
+                        <input type="tel" id="phone" class="form-input" placeholder="9876543210" pattern="[0-9]{10}" required>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="form-group">
+                        <label class="form-label">Delivery Address in Trichy *</label>
+                        <textarea id="address" class="form-textarea" placeholder="Door No, Street Name, Landmark, Area (e.g. Near Mannachanallur Taluk Office, Trichy)" required></textarea>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="form-group">
+                        <label class="form-label">Choose Payment Method *</label>
+                        <div class="radio-group">
+                            <label class="radio-option" id="upi-option">
+                                <input type="radio" name="payment" value="Online Payment / UPI" onchange="updatePaymentDisplay()" required>
+                                <div class="radio-label">
+                                    <div class="radio-title">🔐 Online Payment / UPI</div>
+                                    <div class="radio-description">Pay securely via Google Pay, PhonePe, or any UPI app. No card needed.</div>
+                                </div>
+                            </label>
+
+                            <label class="radio-option" id="cod-option">
+                                <input type="radio" name="payment" value="Cash on Delivery" onchange="updatePaymentDisplay()" required>
+                                <div class="radio-label">
+                                    <div class="radio-title">💵 Cash on Delivery</div>
+                                    <div class="radio-description">Pay directly to our delivery team in cash when cans arrive.</div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="upi-display" id="upiDisplay">
+                            <div class="upi-label">📱 Pay to this UPI ID:</div>
+                            <div class="upi-id">kjhari2008@okhdfcbank</div>
+                            <div style="margin-top: 0.75rem; font-size: 12px; color: var(--text-secondary);">
+                                After placing your order, send payment to this UPI ID using Google Pay, PhonePe, or your bank app. Your delivery will start once payment is received.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Messages -->
+                    <div class="form-message" id="formMessage"></div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span>📦 Place Order</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION SECTION -->
+    <section class="location" id="location">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">LOCATION</div>
+                <h2 class="section-title">Find Us in Trichy</h2>
+                <p class="section-subtitle">Visit our office or reach out anytime. We're here to serve you with fresh water and excellent customer support.</p>
+            </div>
+        </div>
+
+        <div class="location-container">
+            <div class="location-card">
+                <div class="location-card-title">
+                    <div class="location-icon">📍</div>
+                    <div>
+                        <h3>Our Location</h3>
+                    </div>
+                </div>
+                <div class="location-details">
+                    <strong>VK Waters</strong><br>
+                    Opposite Mannachanallur Taluk Office<br>
+                    Trichy
+                </div>
+
+                <div class="location-info">
+                    <div class="info-row">
+                        <div class="info-row-icon">🕐</div>
+                        <div class="info-row-text">
+                            <span class="info-row-label">Operating Hours:</span><br>
+                            Daily 7:00 AM - 8:00 PM (IST)
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-row-icon">🚚</div>
+                        <div class="info-row-text">
+                            <span class="info-row-label">Coverage Area:</span><br>
+                            All over Trichy
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-row-icon">📞</div>
+                        <div class="info-row-text">
+                            <span class="info-row-label">Dispatch Hotline:</span><br>
+                            <a href="tel:7558191971" class="contact-link">7558191971</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://www.google.com/maps/search/Mannachanallur+Taluk+Office+Trichy" target="_blank" class="map-link">🗺️ View on Google Maps</a>
+            </div>
+
+            <div>
+                <div class="map-placeholder">🗺️</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq" id="faq">
+        <div class="faq-container">
+            <div class="section-header">
+                <div class="section-tag">FAQ</div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Have questions? We've got answers. Here's everything you need to know about VK Waters delivery service.</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What is the price of one water can?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>One 20-litre drinking water can from VK Waters costs ₹35. That's our transparent, honest local pricing with no hidden charges or surprises.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How quickly will I receive my order?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>VK Waters aims to deliver within 5 hours anywhere in Trichy. If delivery exceeds 5 hours, you get 1 additional 20-litre water can completely FREE as our guarantee to you.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Is delivery free?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Delivery is completely free across Trichy. You only pay ₹35 per 20-litre can. No extra charges, no hidden fees.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How do I know the water is fresh?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Every VK Waters can has the manufacturing/packing date clearly printed on it. You can verify the freshness yourself. The best-before period is 1.5 months from the manufacturing date. Transparency is our commitment.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What payment methods do you accept?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept two payment options: (1) Online Payment via Google Pay, PhonePe, or any UPI app, and (2) Cash on Delivery. Choose whatever is most convenient for you.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What areas do you deliver to?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>VK Waters delivers all over Trichy—residential areas, commercial streets, offices, and institutions. If you're in Trichy, we can deliver to you!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Can I order online, or do I need to call?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can order directly online using this website! Just select your quantity, enter your details, and place your order. It takes less than a minute. Of course, you can also call us at 7558191971 if you prefer.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What if I order multiple cans?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No problem! You can order as many cans as you need. Simply select the quantity (1, 2, 3, 4, 5+), and we'll calculate your total. Each can is ₹35, and all cans will be delivered in the same delivery slot.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Do you offer subscription or recurring delivery?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently, we process each order individually. However, you can place orders as frequently as you need. For bulk or recurring delivery arrangements, please contact us at 7558191971.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What if delivery is delayed? Do I get compensation?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! That's our 5-Hour Delivery Guarantee. If your delivery takes more than 5 hours, you automatically get 1 additional 20-litre water can completely FREE. No questions asked—it's our promise to you.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How do I contact VK Waters for support?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Reach out anytime! Call us at 7558191971 or email vkwaterx@gmail.com. We're available daily from 7:00 AM to 8:00 PM IST. Our team is here to help with any questions or concerns.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">GET IN TOUCH</div>
+                <h2 class="section-title">Contact VK Waters</h2>
+                <p class="section-subtitle">Have questions? Reach out anytime. We're here to help you get fresh drinking water delivered right to your door.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <div class="contact-info">
+                        <strong>Dispatch Hotline:</strong><br>
+                        <a href="tel:7558191971" class="contact-link">7558191971</a><br><br>
+                        Available daily<br>
+                        7:00 AM - 8:00 PM (IST)
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email Us</h3>
+                    <div class="contact-info">
+                        <strong>Send us a message:</strong><br>
+                        <a href="mailto:vkwaterx@gmail.com" class="contact-link">vkwaterx@gmail.com</a><br><br>
+                        We'll respond<br>
+                        within 2 hours
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Visit Us</h3>
+                    <div class="contact-info">
+                        <strong>VK Waters Office:</strong><br>
+                        Opposite Mannachanallur<br>
+                        Taluk Office, Trichy
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-final">
+                <h3>Ready to Order Fresh Water?</h3>
+                <p>Join hundreds of satisfied customers in Trichy who trust VK Waters for clean, fresh drinking water delivered fast.</p>
+                <a href="#order" class="cta-final-btn">Place Your Order Now 🛒</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>VK Waters</h4>
+                    <p style="font-size: 14px; color: #D1D5DB; margin-bottom: 1rem;">Fresh drinking water delivery for families and workplaces across Trichy. ₹35 per 20-litre can, delivered within 5 hours.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#why-us">Why Choose Us</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#guarantee">Our Guarantee</a></li>
+                        <li><a href="#order">Order Now</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:7558191971">📞 7558191971</a></li>
+                        <li><a href="mailto:vkwaterx@gmail.com">📧 vkwaterx@gmail.com</a></li>
+                        <li><a href="#location">📍 Location</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#freshness">Freshness Promise</a></li>
+                        <li><a href="#contact">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 VK Waters. All rights reserved. | Serving fresh drinking water across Trichy.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzpohv_ILxOA-oyqDeE8dx8BwlUwW6x3mSlfCEYvpPP-K508keTo0xmo5g1VJvQWejT/exec';
+        const PRICE_PER_CAN = 35;
+
+        // Quantity functions
+        function setQuantity(num) {
+            if (num === 5) num = 5;
+            document.getElementById('quantity').value = num;
+            updatePrice();
+            updateQtyButtons();
+        }
+
+        function increaseQuantity() {
+            const input = document.getElementById('quantity');
+            input.value = Math.min(100, parseInt(input.value) + 1);
+            updatePrice();
+            updateQtyButtons();
+        }
+
+        function decreaseQuantity() {
+            const input = document.getElementById('quantity');
+            input.value = Math.max(1, parseInt(input.value) - 1);
+            updatePrice();
+            updateQtyButtons();
+        }
+
+        function updatePrice() {
+            const qty = parseInt(document.getElementById('quantity').value) || 1;
+            const total = qty * PRICE_PER_CAN;
+            
+            document.getElementById('calcTotal').textContent = total;
+            document.getElementById('summary-cans').textContent = qty;
+            document.getElementById('summary-subtotal').textContent = total;
+            document.getElementById('summary-total').textContent = total;
+        }
+
+        function updateQtyButtons() {
+            const qty = parseInt(document.getElementById('quantity').value);
+            document.querySelectorAll('.qty-button').forEach((btn, idx) => {
+                btn.classList.remove('active');
+                const btnQty = idx < 4 ? idx + 1 : 5;
+                if (btnQty === qty || (idx === 4 && qty >= 5)) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        function updatePaymentDisplay() {
+            const payment = document.querySelector('input[name="payment"]:checked')?.value;
+            const upiDisplay = document.getElementById('upiDisplay');
+            
+            if (payment === 'Online Payment / UPI') {
+                upiDisplay.classList.add('show');
+            } else {
+                upiDisplay.classList.remove('show');
+            }
+        }
+
+        function toggleFaq(element) {
+            element.parentElement.classList.toggle('open');
+        }
+
+        // Form submission
+        document.getElementById('orderForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const cans = parseInt(document.getElementById('quantity').value) || 1;
+            const paymentMethod = document.querySelector('input[name="payment"]:checked')?.value;
+
+            // Validate
+            if (!name || !phone || !address || !paymentMethod) {
+                showMessage('Please fill in all fields.', 'error');
+                return;
+            }
+
+            if (phone.length !== 10 || !/^\d{10}$/.test(phone)) {
+                showMessage('Please enter a valid 10-digit phone number.', 'error');
+                return;
+            }
+
+            // Show processing state
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = '⏳ Placing Order...';
+
+            try {
+                // Build URL with query parameters
+                const params = new URLSearchParams({
+                    name,
+                    phone,
+                    address,
+                    cans,
+                    paymentMethod
+                });
+
+                const url = GOOGLE_APPS_SCRIPT_URL + '?' + params.toString();
+
+                // Send to Google Apps Script
+                await fetch(url, {
+                    method: 'GET',
+                    mode: 'no-cors'
+                });
+
+                // Show success
+                showMessage('✓ Order placed successfully! Our team will contact you shortly at ' + phone + ' to confirm delivery details.', 'success');
+                
+                // Reset form
+                document.getElementById('orderForm').reset();
+                document.getElementById('quantity').value = '1';
+                updatePrice();
+                updateQtyButtons();
+                updatePaymentDisplay();
+
+                // Scroll to message
+                document.getElementById('formMessage').scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            } catch (error) {
+                showMessage('There was an error processing your order. Please try again or call us at 7558191971.', 'error');
+                console.error('Error:', error);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            }
+        });
+
+        function showMessage(text, type) {
+            const msg = document.getElementById('formMessage');
+            msg.textContent = text;
+            msg.className = 'form-message ' + type;
+            msg.style.display = 'block';
+        }
+
+        // Initialize
+        updatePrice();
+        updateQtyButtons();
+    </script>
+</body>
+</html>
